@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole Njeri | Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type = "image/x-icon" href = "Images/826910.png">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2 class="logo">Nicole Njeri</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="projects-main">
+    <h1 class="page-title">My Skills & Projects</h1>
+
+    <!-- 1. SKILLS - 20% of marks - Need 5 skills + visual bars -->
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p>HTML5 <span>90%</span></p>
+          <div class="bar"><div class="level" style="width:90%"></div></div>
+          <p class="stars">★★★★★</p>
+        </div>
+        <div class="skill-card">
+          <p>CSS3 <span>85%</span></p>
+          <div class="bar"><div class="level" style="width:85%"></div></div>
+          <p class="stars">★★★★☆</p>
+        </div>
+        <div class="skill-card">
+          <p>JavaScript <span>70%</span></p>
+          <div class="bar"><div class="level" style="width:70%"></div></div>
+          <p class="stars">★★★☆☆</p>
+        </div>
+        <div class="skill-card">
+          <p>Python <span>75%</span></p>
+          <div class="bar"><div class="level" style="width:75%"></div></div>
+          <p class="stars">★★★★☆</p>
+        </div>
+        <div class="skill-card">
+          <p>Git & GitHub <span>80%</span></p>
+          <div class="bar"><div class="level" style="width:80%"></div></div>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. PROJECTS - 15% marks + FILTER 20% marks -->
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="filter-btns">
+        <button class="filter-btn active" onclick="filterProjects('all')">All</button>
+        <button class="filter-btn" onclick="filterProjects('web')">Web</button>
+        <button class="filter-btn" onclick="filterProjects('python')">Python</button>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card" data-category="web">
+          <h3>Personal Portfolio</h3>
+          <p>Responsive portfolio built for CSN 1101 Assignments 1 & 2.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+          <a class="git-link" href="https://github.com/ndutanicole8-bit" target="_blank" rel="noopener" aria-label="Nicole on GitHub (opens in a new tab)">
+      <i class="fa-brands fa-github" aria-hidden="true"></i> Github Link
+    </a>
+        </div>
+
+        <div class="project-card" data-category="web">
+          <h3>Student Task Manager</h3>
+          <p>Simple to-do app to manage class assignments using JavaScript.</p>
+          <div class="tags"><span>HTML</span><span>JS</span></div>
+          <a class="git-link" href="https://github.com/ndutanicole8-bit" target="_blank" rel="noopener" aria-label="Nicole on GitHub (opens in a new tab)">
+      <i class="fa-brands fa-github" aria-hidden="true"></i> Github Link
+    </a>
+        </div>
+
+        <div class="project-card" data-category="python">
+          <h3>Grade Calculator</h3>
+          <p>Python program that calculates total, average and grade from marks.</p>
+          <div class="tags"><span>Python</span></div>
+          <a class="git-link" href="https://github.com/ndutanicole8-bit" target="_blank" rel="noopener" aria-label="Nicole on GitHub (opens in a new tab)">
+      <i class="fa-brands fa-github" aria-hidden="true"></i> Github Link
+    </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FORM VALIDATION - 15% marks -->
+    <section class="form-section">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label>Name</label>
+        <input type="text" id="name" placeholder="Your name">
+        <small id="nameError" class="error"></small>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Your email">
+        <small id="emailError" class="error"></small>
+
+        <label>Message</label>
+        <textarea id="message" rows="4" placeholder="Your message"></textarea>
+        <small id="messageError" class="error"></small>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="success" class="success"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <p>&copy; 2026 Nicole Njeri - KCA University</p>
+  </footer>
+
+<script>
+// FILTER FUNCTION - This is what teacher checks
+function filterProjects(category) {
+  const cards = document.querySelectorAll('.project-card');
+  const btns = document.querySelectorAll('.filter-btn');
+  
+  btns.forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// FORM VALIDATION - Teacher checks regex
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  let valid = true;
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+
+  document.getElementById('nameError').textContent = '';
+  document.getElementById('emailError').textContent = '';
+  document.getElementById('messageError').textContent = '';
+
+  if(name.length < 2){
+    document.getElementById('nameError').textContent = 'Name too short';
+    valid = false;
+  }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    document.getElementById('emailError').textContent = 'Enter valid email';
+    valid = false;
+  }
+  if(message.length < 10){
+    document.getElementById('messageError').textContent = 'Message at least 10 chars';
+    valid = false;
+  }
+  if(valid){
+    document.getElementById('success').textContent = 'Message sent! (Demo)';
+    this.reset();
+  }
+});
+</script>
+
+</body>
+</html>

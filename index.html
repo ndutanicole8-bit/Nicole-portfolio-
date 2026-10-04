@@ -1,80 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Nicole Njeri Nduta, a Software Development student.">
-    <title>Nicole Njeri Nduta | Software Development</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Nicole Njeri, an IT student at KCA University learning web development.">
+  <title>Nicole Njeri | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="826910.png">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="navbar" aria-label="Main navigation">
-            <a class="logo" href="#home">Nicole.</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="hero" id="home">
-            <div class="hero-text">
-                <p class="eyebrow">Software Development Student</p>
-                <h1>Hi, I'm <span>Nicole Njeri Nduta.</span></h1>
-                <p class="tagline">Aspiring developer exploring web technology and building for the future.</p>
-                <a class="button" href="#about">Learn More</a>
-            </div>
+  <header>
+    <nav aria-label="Main">
+      <h2 class="logo">Nicole Njeri</h2>
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <div class="hero-image">
-                <img src="profile.jpg" alt="Professional photo of Nicole Njeri Nduta">
-            </div>
-        </section>
+  <main>
+    <section class="hero">
+      <img src="photo.jpg" alt="Portrait of Nicole Njeri" class="nicole" width="150" height="150">
+      <h1><img src="826910.png" alt="">Nicole Njeri</h1>
+      <p>Aspiring Web Developer &amp; IT Student at KCA University</p>
+      <a href="projects.html" class="btn">View my projects</a>
+    </section>
 
-        <section class="section" id="about">
-            <p class="section-label">About Me</p>
-            <h2>Getting to know me</h2>
-            <p>
-                I am a first-year Software Development student with an interest in web technology.
-                I enjoy learning how digital products are designed and built, and I am especially
-                interested in app development.
-            </p>
-            <p>
-                I am currently developing my skills in programming and web technologies while
-                building a strong foundation for future software projects.
-            </p>
-        </section>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Hi, I am Nicole Njeri, a first-year IT student at KCA University. I am passionate about building clean and responsive websites. I am currently learning HTML5, CSS3, JavaScript and Python.</p>
+      <p>This portfolio was created for CSN 1101 Web Technologies to showcase my learning journey.</p>
+    </section>
+  </main>
 
-        <section class="section projects" id="projects">
-            <p class="section-label">Projects</p>
-            <h2>What I'm working toward</h2>
-            <div class="project-card">
-                <h3>Personal Portfolio</h3>
-                <p>
-                    A responsive personal website created with semantic HTML5 and external CSS
-                    to showcase my interests, skills, and future projects.
-                </p>
-                <span>HTML5 · CSS3 · Responsive Design</span>
-            </div>
-        </section>
+  <footer id="contact">
+    <h3>Contact Me</h3>
+    <p>Email: <a href="mailto:ndutanicole8@gmail.com"> ndutanicole8@gmail.com</a></p>
+    <a class="social-link" href="https://github.com/ndutanicole8-bit" target="_blank" rel="noopener" aria-label="Nicole on GitHub (opens in a new tab)">
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
+    </a>
+    <p>&copy; 2026 Nicole Njeri</p>
+  </footer>
 
-        <section class="section contact" id="contact">
-            <p class="section-label">Contact</p>
-            <h2>Let's connect</h2>
-            <p>If you'd like to get in touch, you can reach me through my student email.</p>
-            <a class="email" href="mailto:2607601@student.kcau.ac.ke">2607601@student.kcau.ac.ke</a>
-
-            <div class="social-links">
-                <!-- Replace # with your GitHub profile link before submission. -->
-                <a href="https://github.com/ndutanicole8-bit" aria-label="GitHub profile">GitHub</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Nicole Njeri Nduta. Built with HTML &amp; CSS.</p>
-    </footer>
 </body>
 </html>
