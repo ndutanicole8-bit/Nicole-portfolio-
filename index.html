@@ -28,7 +28,7 @@
 
   <main>
     <section class="hero">
-      <img src="photo.jpg" alt="Portrait of Nicole Njeri" class="nicole" width="150" height="150">
+      <img src="photo.jpg" loading="lazy" width="400" height="300>" alt="Portrait of Nicole Njeri" class="nicole" width="150" height="150">
       <h1><img src="826910.png" alt="">Nicole Njeri</h1>
       <p>Aspiring Web Developer &amp; IT Student at KCA University</p>
       <a href="projects.html" class="btn">View my projects</a>
@@ -52,3 +52,18 @@
 
 </body>
 </html>
+<section id="live-api" style="padding:40px 20px; background:#f5f5f5; margin:20px; border-radius:12px;">
+  <h2>Live Data from Internet (Assignment 3)</h2>
+  <p>This data is fetched live using JavaScript Fetch API</p>
+
+  <label>ndutanicole8-bit:</label><br>
+  <input type="text" id="ndutanicole8-bit"
+   placeholder="ndutanicole8-bit"
+    value="octocat" style="padding:10px; width:200px;">
+  <button id="fetchButton" style="padding:10px 15px; background:blue; color:white; border:none; border-radius:6px;">Load Projects</button>
+
+  <p id="loadingMessage" style="display:none;">⏳ Loading live data from GitHub...</p>
+  <p id="errorMessage" style="display:none; color:red; background:#ffe0e0; padding:10px;"></p>
+  
+  <div id="projectsContainer" style="margin-top:20px;"></div>
+</section>
